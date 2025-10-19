@@ -12,7 +12,7 @@ import java.time.LocalDate;
  */
 public class Estudiante extends Persona{
 
-    public Estudiante(String nombre, String direccion, int telefono, LocalDate fechaNacimiento) {
+    public Estudiante(String nombre, String direccion, double telefono, LocalDate fechaNacimiento) {
         super(nombre, direccion, telefono, fechaNacimiento);
     }    
 }

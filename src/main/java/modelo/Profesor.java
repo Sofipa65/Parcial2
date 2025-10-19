@@ -10,16 +10,42 @@ import java.time.LocalDate;
  */
 public class Profesor extends Persona {
     
-    private int cedula;
+    private double cedula;
     private String areaTrabajo;
     private double pago;
+    private double prestaciones;
     
     
-    public Profesor (int cedula, String areaTrabajo, double pago, String nombre, String direccion, int telefono, LocalDate fechaNacimiento) {
+    public Profesor (double cedula, String areaTrabajo, String nombre, String direccion, double telefono, LocalDate fechaNacimiento) {
         super(nombre, direccion, telefono, fechaNacimiento);
         this.cedula = cedula;
         this.areaTrabajo = areaTrabajo;
-        this.pago = pago;
+    }
+
+    public double getCedula() {
+        return cedula;
+    }
+
+    public String getAreaTrabajo() {
+        return areaTrabajo;
+    }
+
+    public double getPago() {
+        return pago;
+    }
+
+    public double getPrestaciones() {
+        return prestaciones;
+    }
+
+    public void CalcularSalarioTotal(double salarioHora, int horasDictadas ){
+        
+        pago= salarioHora * horasDictadas;
+        
+        pago += pago*0.20 ;
+   
+        prestaciones= pago*0.17 ;
+        
     }
     
 }

@@ -13,10 +13,10 @@ public class Persona {
     
     protected String nombre;
     protected String direccion;
-    protected int telefono;
+    protected double telefono;
     protected LocalDate fechaNacimiento;
 
-    public Persona(String nombre, String direccion, int telefono, LocalDate fechaNacimiento) {
+    public Persona(String nombre, String direccion, double telefono, LocalDate fechaNacimiento) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
