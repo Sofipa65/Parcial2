@@ -4,6 +4,7 @@
  */
 package modelo;
 import java.time.LocalDate;
+import java.util.ArrayList;
 /**
  *
  * @author Sofia
@@ -61,5 +62,4 @@ public class Profesor extends Persona {
    
         prestaciones= pago*0.17 ;   
     }
-    
 }

@@ -17,8 +17,8 @@ import modelo.Profesor;
  */
 public class Vista {
     
-     static ArrayList<Persona> profesores= new ArrayList<>();
-    static ArrayList<Persona> estudiantes= new ArrayList<>();
+    static ArrayList<Profesor> profesores= new ArrayList<>();
+    static ArrayList<Estudiante> estudiantes= new ArrayList<>();
     
     public int mostrarMenu() {
         String menu = """
@@ -77,4 +77,36 @@ public class Vista {
         
         estudiantes.add(estudiante);    
     }
+    
+    public static void mostrarEstudiantes() {
+
+        String lista = "Estudiantes:\n";
+        lista += estudiantes.toString();
+        JOptionPane.showMessageDialog(null, lista);
+    }
+    
+    public static void ordenarProfesores(){
+        
+        for (int i = 0; i < profesores.size()-1; i++) {
+            for (int j = 0; j < profesores.size()- i - 1; j++) {
+            
+                if (profesores.get(j).getPago()> profesores.get(j+1).getPago()){
+
+                    Profesor puestotemporal = profesores.get(j);
+                    profesores.set(j, profesores.get(j + 1));
+                    profesores.set(j + 1, puestotemporal);
+                }
+            }
+        }
+    }
+    
+    
+    public static void mostrarProfesores() {
+
+        String lista = "Profesores:\n";
+        ordenarProfesores();
+        lista += profesores.toString();
+        JOptionPane.showMessageDialog(null, lista);
+    }
+
 }
