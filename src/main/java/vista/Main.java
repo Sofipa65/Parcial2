@@ -4,10 +4,7 @@
 
 package vista;
 import javax.swing.JOptionPane;
-import java.util.ArrayList;
-import modelo.Estudiante;
-import modelo.Persona;
-import modelo.Profesor;
+
 
 /**
  *

@@ -30,6 +30,7 @@ public class ProfesorTest {
         assertEquals(204000, p.getPrestaciones(), 0.01);
     }
     
+    @Test
     public void calculoDePagoPlanta(){
         
          LocalDate fechaNac = LocalDate.of(1997, 3, 12);
