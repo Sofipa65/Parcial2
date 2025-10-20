@@ -38,14 +38,28 @@ public class Profesor extends Persona {
         return prestaciones;
     }
 
+    @Override
+    public String toString() {
+        return "Profesor: " + nombre + " |Cédula: " + cedula + "  |Área de trabajo: " + areaTrabajo + "  |Salario total: " + pago + "  |Prestaciones: " + prestaciones + "\n" + 
+               "  |Dirección: "+ direccion + "  |Teléfono: " + telefono + "  |Fecha de nacimiento: " +fechaNacimiento+ "\n";
+    }
+
     public void CalcularSalarioTotal(double salarioHora, int horasDictadas ){
         
         pago= salarioHora * horasDictadas;
         
         pago += pago*0.20 ;
    
-        prestaciones= pago*0.17 ;
+        prestaciones= pago*0.17 ;   
+    }
+    
+    public void CalcularSalarioTotal(double salarioHora){
         
+        pago= salarioHora * 176;
+        
+        pago += pago*0.20 ;
+   
+        prestaciones= pago*0.17 ;   
     }
     
 }

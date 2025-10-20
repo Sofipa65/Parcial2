@@ -22,7 +22,7 @@ public class ProfesorTest {
     public void calculoDeSalario(){
         
          LocalDate fechaNac = LocalDate.of(1997, 3, 12);
-        Profesor p = new Profesor(11.0, "Comunicación", "Ana", "Carrera 83", 34.0,fechaNac );
+        Profesor p = new Profesor(1103748937, "Comunicación", "Ana", "Carrera 83", 3493785649.0, fechaNac );
         
         p.CalcularSalarioTotal(250000, 4);
         

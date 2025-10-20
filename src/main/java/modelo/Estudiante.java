@@ -14,5 +14,12 @@ public class Estudiante extends Persona{
 
     public Estudiante(String nombre, String direccion, double telefono, LocalDate fechaNacimiento) {
         super(nombre, direccion, telefono, fechaNacimiento);
-    }    
+    }
+
+    @Override
+    public String toString() {
+        return "Estudiante:" + nombre + "  |Dirección: "+ direccion + "  |Teléfono: " + telefono + "  |Fecha de nacimiento: " +fechaNacimiento+ "\n" ;
+    }
+
+    
 }
