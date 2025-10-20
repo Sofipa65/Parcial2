@@ -19,15 +19,26 @@ import java.time.LocalDate;
 public class ProfesorTest {
     
     @Test
-    public void calculoDeSalario(){
+    public void calculoDePagoCatedra(){
         
          LocalDate fechaNac = LocalDate.of(1997, 3, 12);
-        Profesor p = new Profesor(1103748937, "Comunicación", "Ana", "Carrera 83", 3493785649.0, fechaNac );
+        Profesor p = new Profesor("1103748937", "Comunicación", "Ana", "Carrera 83", "3493785649", fechaNac );
         
         p.CalcularSalarioTotal(250000, 4);
         
         assertEquals(1200000, p.getPago(), 0.01);
         assertEquals(204000, p.getPrestaciones(), 0.01);
+    }
+    
+    public void calculoDePagoPlanta(){
+        
+         LocalDate fechaNac = LocalDate.of(1997, 3, 12);
+        Profesor p = new Profesor("1103748937", "Ingeniería", "Carolina", "Carrera 83", "3493785649", fechaNac );
+        
+        p.CalcularSalarioTotal(15000);
+        
+        assertEquals(3168000, p.getPago(), 0.01);
+        assertEquals(448800, p.getPrestaciones(), 0.01);
     }
     
 }

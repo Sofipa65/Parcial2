@@ -13,10 +13,10 @@ public class Persona {
     
     protected String nombre;
     protected String direccion;
-    protected double telefono;
+    protected String telefono;
     protected LocalDate fechaNacimiento;
 
-    public Persona(String nombre, String direccion, double telefono, LocalDate fechaNacimiento) {
+    public Persona(String nombre, String direccion, String telefono, LocalDate fechaNacimiento) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
@@ -26,8 +26,5 @@ public class Persona {
     @Override
     public String toString() {
         return "Persona{" + "nombre=" + nombre + ", direccion=" + direccion + ", telefono=" + telefono + ", fechaNacimiento=" + fechaNacimiento + '}';
-    }
-    
-    
-    
+    }  
 }

@@ -11,19 +11,19 @@ import java.util.ArrayList;
  */
 public class Profesor extends Persona {
     
-    private double cedula;
+    private String cedula;
     private String areaTrabajo;
     private double pago;
     private double prestaciones;
     
     
-    public Profesor (double cedula, String areaTrabajo, String nombre, String direccion, double telefono, LocalDate fechaNacimiento) {
+    public Profesor (String cedula, String areaTrabajo, String nombre, String direccion, String telefono, LocalDate fechaNacimiento) {
         super(nombre, direccion, telefono, fechaNacimiento);
         this.cedula = cedula;
         this.areaTrabajo = areaTrabajo;
     }
 
-    public double getCedula() {
+    public String getCedula() {
         return cedula;
     }
 

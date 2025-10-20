@@ -39,8 +39,8 @@ public class Vista {
         String nombre= JOptionPane.showInputDialog("Ingrese el nombre del profesor: ");
         String areaTrabajo= JOptionPane.showInputDialog("Ingrese el area de trabajo del profesor: ");
         String direccion= JOptionPane.showInputDialog("Ingrese la dirección del profesor: ");
-        double cedula= Double.parseDouble(JOptionPane.showInputDialog("Ingrese el número de cédula: "));
-        double telefono= Double.parseDouble(JOptionPane.showInputDialog("Ingrese el teléfono del profesor: "));
+        String cedula= JOptionPane.showInputDialog("Ingrese el número de cédula: ");
+        String telefono= JOptionPane.showInputDialog("Ingrese el teléfono del profesor: ");
         LocalDate fechaNacimiento = LocalDate.parse(JOptionPane.showInputDialog("Ingrese la fecha de nacimiento (AAAA-MM-DD): "));
 
         Profesor profesor= new Profesor(cedula, areaTrabajo, nombre, direccion, telefono, fechaNacimiento);
@@ -68,9 +68,9 @@ public class Vista {
     
     public void AgregarEstudiante(){
         
-        String nombre= JOptionPane.showInputDialog("Ingrese el nombre del profesor: ");
-        String direccion= JOptionPane.showInputDialog("Ingrese la dirección del profesor: ");
-        double telefono= Double.parseDouble(JOptionPane.showInputDialog("Ingrese el teléfono del profesor: "));
+        String nombre= JOptionPane.showInputDialog("Ingrese el nombre del estudiante: ");
+        String direccion= JOptionPane.showInputDialog("Ingrese la dirección del estudiante: ");
+        String telefono= JOptionPane.showInputDialog("Ingrese el teléfono del estudiante: ");
         LocalDate fechaNacimiento = LocalDate.parse(JOptionPane.showInputDialog("Ingrese la fecha de nacimiento (AAAA-MM-DD): "));
         
         Estudiante estudiante= new Estudiante(nombre, direccion, telefono, fechaNacimiento);
@@ -78,7 +78,7 @@ public class Vista {
         estudiantes.add(estudiante);    
     }
     
-    public static void mostrarEstudiantes() {
+    public void mostrarEstudiantes() {
 
         String lista = "Estudiantes:\n";
         lista += estudiantes.toString();
@@ -101,7 +101,7 @@ public class Vista {
     }
     
     
-    public static void mostrarProfesores() {
+    public void mostrarProfesores() {
 
         String lista = "Profesores:\n";
         ordenarProfesores();
